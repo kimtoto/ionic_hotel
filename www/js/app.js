@@ -20,9 +20,13 @@ angular.module('App', ['ionic'])
               url:  '/restaurant',
               controller:  'RestaurantController',
               templateUrl: 'views/restaurant/restaurant.html'
+            })
+            .state('tour', {
+              url:  '/tour',
+              templateUrl:  'views/tour/tour.html'
             });
 
-          $urlRouterProvider.otherwise('/home');
+          $urlRouterProvider.otherwise('/tour');
     })
     .run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
